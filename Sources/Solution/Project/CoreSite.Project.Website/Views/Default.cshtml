@@ -1,0 +1,27 @@
+﻿@using Sitecore.Mvc
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Html.Sitecore().Field("Title", Sitecore.Context.Item, new { DisableWebEdit = true })</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="header">
+    @Html.Sitecore().Placeholder("header")
+</div>
+
+<div class="container">
+    @Html.Sitecore().Placeholder("content")
+</div>
+
+<div class="footer">
+    @Html.Sitecore().Placeholder("footer")
+</div>
+
+</body>
+</html>
